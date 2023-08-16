@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  
+  background-color: #d0e6f4;
+  display:flex;
+  height:100vh;
+  flex-direction: column;
+}
+header {
+  background-color: #04aa6d;
+}
+/* Create a sticky/fixed navbar */
+#navbar {
+  background-color: #d0e6f4;
+  padding: 30px 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 10px;
+}
+
+/* Style the logo */
+#navbar #logo {
+  margin-left: 5%;
+}
+
+
+#navbar #logo img {
+  width: 300px;
+  height: 50px;
+}
+
+
+/* Links on mouse-over */
+#navbar a:hover {
+  background-color: royalblue;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: white;
+}
+#navbar a.active:hover {
+  background-color: royalblue;
+}
+
+/* Display some links to the right */
+#navbar-right {
+    padding: 10px;
+  float: right;
+  margin-right: 5%;
+}
+/* Success Message */
+#success-msg{
+  color: #04aa6d;
+  z-index: 99;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  background-color: #d0e6f4;
+  position:absolute;
+}
+/* forms styling */
+
+#form {
+  width: 400px;
+  line-height: 2;
+  margin: 180px auto 0 auto;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.1); 
+  border-radius: 10px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+#form h1 {
+  color: #0f2027;
+  text-align: center;
+}
+
+#form button {
+  padding: 10px;
+  font-size: 20px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: rgb(41, 57, 194);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#form button:hover{
+  opacity: 0.8;
+  font-weight: bold;
+}
+.input-control {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-control input {
+  margin-top: 3px;
+border: 2px solid #f0f0f0;
+border-radius: 4px;
+display: block;
+font-size: 12px;
+padding: 10px;
+width: 95%;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  margin-top: -7px;
+  font-size: 16px;
+  height: 30px;
+
+}
+form img{
+  border-radius: 50%;
+  width:70px;
+}
+form #loginlink{
+font-size: 12px;
+right:20px;
+}
+#loginlinky{
+max-width: fit-content;
+font-size: 16px;
+}
+img.avatar {
+  width: 20%;
+  border-radius: 50%;
+  margin-left: 40%;
+}
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  font-size: 18px;
+  width: 100%;
+  padding: 5px;
+  text-align: center;
+  background-color: aliceblue;
+}

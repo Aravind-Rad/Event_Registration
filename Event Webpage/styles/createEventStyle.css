@@ -1,0 +1,261 @@
+/*common styles */
+  body {
+    background-color: #d0e6f4;
+    display:flex;
+    height:100vh;
+    flex-direction: column;
+  }
+/* forms styling */
+
+#regForm {
+  line-height:2.5;
+  align-items: start;
+  width:550px;
+  margin: 20vh auto 0 auto;
+  padding: 20px;
+  background-color: whitesmoke; 
+  border-radius: 4px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+#days label{
+  font-size: 20px;
+  margin-left: 5%;
+  width: 30%;
+}
+#regForm h3 {
+  color: #0f2027;
+  text-align: center;
+}
+button {
+  padding: 10px 20px;
+  font-size: 17px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: rgb(41, 57, 194);
+  border: none;
+  border-radius: 4px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+#prevBtn{
+  float: left;
+  max-width: fit-content;
+}
+#nextBtn{
+  float: right;
+  max-width: fit-content;
+}
+#regForm button:hover{
+  opacity: 0.8;
+  font-weight: bold;
+}
+.input-control {
+  display: flex;
+  justify-content:start;
+  flex-direction: column;
+}
+
+.input-control input ,.input-control textarea{
+border: 2px solid #f0f0f0;
+border-radius: 4px;
+display: block;
+font-size: 12px;
+padding: 10px;
+width: 90%;
+}
+#intSt{
+  width: 100%;
+}
+
+.input-control input:focus ,.input-control textarea:focus{
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 14px; 
+  margin-bottom: 3px;
+}
+
+
+.input-control-day{
+  width: 100%;
+  display: flex;
+  align-items: start;
+}
+.input-control-day input {
+border: 2px solid #f0f0f0;
+display: flex;
+border-radius: 4px;
+font-size: 15px;
+width: 100%;
+padding:0px 40px;
+justify-content: left;
+}
+.weekDays{
+  float: right;
+}
+.weekDays input{
+  width: 35%;
+}
+
+.input-control-day input:focus {
+  outline: 0;
+}
+
+.input-control-day.success input {
+  border-color: #09c372;
+}
+
+.input-control-day.error input {
+  border-color: #ff3860;
+}
+
+.input-control-day .error {
+  color: #ff3860;
+  font-size: 10px;
+  height: 10px;
+  margin-bottom: 1px;
+}
+
+.dayerror {
+  color: #ff3860;
+  font-size: 15px;
+  margin-bottom: 1px;
+}
+.weekerror{
+  margin-top: -15px;
+  margin-left:150px;
+  position:absolute;
+  color:#ff3860;
+  font-size: 13px;
+}
+form img{
+  border-radius: 50%;
+  width:70px;
+}
+
+#error, #error2{
+font-size: 14px;
+margin-bottom: 3px;
+}
+
+#regFormat,#regFormat2{
+display: block;
+position:relative;
+border: 2px solid #f0f0f0;
+border-radius: 4px;
+display: block;
+font-size: 12px;
+padding: 10px;
+}
+
+#duration-inp{
+display: flex;
+}
+#stTime{
+  width: 115%;
+}
+
+#duration-input{
+display: inline-block;
+width: 95%;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;  
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+/* side nav bar for user preferance */
+.sidenav{
+  position:fixed;
+  margin-top: 250px;
+  z-index: 99;
+}
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -120px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 170px; /* Set a specific width */
+  text-decoration:none; /* Remove underline */
+  text-align: left;
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 25px 25px 0; /* Rounded corners on the top right and bottom right side */
+  cursor: pointer;
+}
+
+#mySidenav :hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+  cursor: pointer;
+}
+
+/* The Profile link: 20px from the top with a green background */
+#navimg{
+  position: absolute;
+  left:130px;
+  width:20px;
+}
+#Profile {
+  top: 20px;
+  background-color: #04AA6D;
+}
+
+#Create {
+  top: 80px;
+  background-color: #2196F3; /* Blue */
+}
+
+#MyEvents {
+  top: 140px;
+  background-color: #f44336; /* Red */
+}
+
+#Logout {
+  top: 200px;
+  background-color: #555 /* Light Black */
+}
+/* rendering the hover over images */
+
+#navimg:hover{
+  left:160px;
+}
+
+
+#success-msg{
+color: black;
+}

@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #d0e6f4;
+  background-size:cover;
+  display:flex;
+  flex-direction: column;
+}
+header {
+  background-color: #04aa6d;
+}
+
+
+/* Create a sticky/fixed navbar */
+#navbar {
+background-color: #d0e6f4;
+padding: 30px 10px;
+position: fixed;
+width: 100%;
+top: 0;
+z-index: 99;
+}
+
+/* Style the navbar links */
+#navbar a {
+float: left;
+color: black;
+text-align: center;
+padding: 12px;
+text-decoration: none;
+font-size: 18px;
+line-height: 25px;
+border-radius: 10px;
+}
+
+/* Style the logo */
+#navbar #logo {
+margin-left: 5%;
+}
+
+#navbar #logo img {
+width: 300px;
+height: 50px;
+}
+
+
+/* Links on mouse-over */
+#navbar a:hover {
+  background-color: royalblue;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: white;
+}
+#navbar a.active:hover {
+  background-color: royalblue;
+}
+
+/* Display some links to the right */
+#navbar-right {
+  padding: 10px;
+  float: right;
+  margin-right: 5%;
+}
+
+
+/* side nav bar for user preferance */
+.sidenav{
+  position:fixed;
+  margin-top: 250px;
+  z-index: 99;
+}
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -150px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 170px; /* Set a specific width */
+  text-decoration:none; /* Remove underline */
+  text-align: left;
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 25px 25px 0; /* Rounded corners on the top right and bottom right side */
+}
+
+#mySidenav :hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+}
+
+/* The Profile link: 20px from the top with a green background */
+#Profile {
+  top: 20px;
+  background-color: #04AA6D;
+}
+#navimg{
+  position: absolute;
+  left:160px;
+  width:20px;
+}
+
+#Create {
+  top: 80px;
+  background-color: #2196F3; /* Blue */
+}
+
+#MyEvents {
+  top: 140px;
+  background-color: #f44336; /* Red */
+}
+
+#Logout {
+  top: 200px;
+  background-color: #555 /* Light Black */
+}
+/* rendering the hover over images */
+
+#navimg:hover{
+  left:160px;
+}
+
+
+
+.container{
+  margin-left: 10%;
+  margin-top: 230px;
+  margin-bottom: 100px;
+  max-width: 80%;
+  border-radius: 20px;
+  height: fit-content;
+  color: black;
+  background-color: aliceblue;
+}
+.container h1{
+  margin-left: 20px;
+}
+#events{
+  width: 80%;
+  position: relative;
+  padding: 10px;
+}
+
+table{
+  margin-left: 5%;
+  width: 90%;
+  color:black;
+}
+table td{
+  width:50;
+}
+
+table tr:hover{
+  background-color: beige;
+}
+
+.editbtn:hover{
+  color:#2196F3;
+  cursor: pointer;
+}
+.deletebtn:hover{
+  color:#f44336;
+  cursor: pointer;
+}
+
+
+/* footer */
+
+footer{
+position: fixed;
+bottom: 0;
+font-size: 18px;
+width: 100%;
+padding: 5px;
+text-align: center;
+background-color: aliceblue;
+}

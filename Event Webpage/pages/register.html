@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuikBook|Register User</title>
+    <link rel="stylesheet" href="../styles/registerStyle.css" />
+    <script defer src="../scripts/registerScript.js"></script>
+    <script defer src="../scripts/validationScript.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <span id="logo"><img src="../assets/logo3.png" alt=""></span>
+        <div id="navbar-right">
+          <span>
+            <a href="../index.html">Home</a>
+        </div>
+      </div>
+    </header>
+    <div id="success-msg"><center><br><br>
+      <img src="../assets/registerSuccess.png" alt="">
+    <h1 >You've successfully Registered</h1></center>
+  </div>
+    <section>
+      <div class="container" >
+          <form id="form" method="post">
+              <h1>Registration</h1>
+              <div style="text-align: center;height: 30px;">
+                  <img src="../assets/form_avatar.png" width="75px" ><br><br>
+              </div>
+              <div class="input-control">
+                  <label for="username">Username<a style="color: red;">*</a></label>
+                  <input id="username" name="username" type="text">
+                  <div class="error"></div>
+              </div>
+              <div class="input-control">
+                  <label for="email">Email<a style="color: red;">*</a></label>
+                  <input id="email" name="email" type="text">
+                  <div class="error"></div>
+              </div>
+              <div class="input-control">
+                  <label for="password">Password<a style="color: red;">*</a></label>
+                  <input id="password"name="password" type="password">
+                  <div class="error"></div>
+              </div>
+              <div class="input-control">
+                  <label for="password2">Password again<a style="color: red;">*</a></label>
+                  <input id="password2"name="password2" type="text" autocomplete="off">
+                  <div class="error"></div>
+              </div>
+              <button type="submit" >Sign Up</button><br>
+              <span id="loginlinky">Already have an account <a href="./loginPage.html">let's Login</a></span>
+          </form>
+          </div>
+      <br>
+  </section>
+  <footer>
+    <p>All rights reserved &copy; </p>
+  </footer>
+</body>
+</html>

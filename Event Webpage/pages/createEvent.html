@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuikBook|Create Event</title>
+  <link rel="stylesheet" href="../styles/createEventStyle.css" />
+  <link rel="stylesheet" href="../styles/commonStyles.css">
+  <script defer src="../scripts/createEventScript.js"></script>
+  <script defer src="../scripts/validationScript.js"></script>
+</head>
+
+<body onload="return pageOnLoad()" onunload="pageUnLoad()">
+  <header>
+    <div id="navbar">
+      <span href="../index.html" id="logo"><img src="../assets/logo3.png" alt=""></span>
+      <div id="navbar-right">
+        <span>
+          <a href="../index.html">Home</a>
+      </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+      <a href="#" id="Profile">Profile <img id="navimg" src="../assets/profile.png"></a>
+      <a onclick="createNewEvent(this.id)" id="Create">Create <img id="navimg" src="../assets/create.png"></a>
+      <a href="../pages/eventDashBoard.html" id="MyEvents">My Events <img id="navimg" src="../assets/events.png"></a>
+      <a onclick="delCurrentUser()" id="Logout">Logout <img id="navimg" src="../assets/logout.png"></a>
+    </div>
+  </header>
+  <div class="container">
+    <form id="regForm" action="#">
+      <h3 id="formHead">Create New event</h3>
+      <!-- One "tab" for each step in the form: -->
+      <div class="tab">
+        <div class="input-control">
+          <label for="eventname">Event Name: <a style="color: red;">*</a></label>
+          <input id="eventname" name="eventname" type="text">
+          <div class="error"></div>
+        </div>
+
+        <div class="input-control">
+          <label for="dayCount">Scheduled number of days:<a style="color: red;">*</a></label>
+          <input id="dayCount" name="dayCount" type="number">
+          <div class="error"></div>
+        </div>
+        <div class="input-control" id="duration-input">
+          <label for="schTime">Time for individual slots:<a style="color: red;">*</a></label>
+          <div id="duration-inp">
+            <input id="schTime" name="schTime" type="number">
+            <select name="format" id="format">
+              <option value="min"
+                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Minute</option>
+              <option value="hrs"
+                style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Hour</option>
+            </select>
+          </div>
+          <div id="error"></div>
+        </div>
+      </div>
+      <div class="tab">
+        Start and End for each day:<a style="color: red;">*</a>
+        <div id="days" onpointerover="defaultVisibility()">
+          <label for="mon">
+            <input type="checkbox" checked="true" name="weekdays" id="mon" onclick="dayVisibility(this.id)">Monday:</label>
+          <span id="mont" class="weekDays" style="display: none;">
+            <span class="input-control-day">
+              <input id="monStTime" name="monStTime" type="time" value="09:00" onfocus="this.showPicker()">
+              <span class="error"></span>-
+              <input id="monEnTime" name="monEnTime" type="time" value="18:00" onfocus="this.showPicker()">
+            </span>
+            <span class="weekerror"></span>
+          </span><br>
+          <label for="tue">
+            <input type="checkbox" checked="true" name="weekdays" id="tue" onclick="dayVisibility(this.id)">Tuesday:</label>
+          <span id="tuet" class="weekDays" style="display: none;">
+            <span class="input-control-day">
+              <input id="tueStTime" name="tueStTime" type="time" value="09:00" onfocus="this.showPicker()">
+              <span class="error"></span>-
+              <input id="tueEnTime" name="tueEnTime" type="time" value="18:00" onfocus="this.showPicker()">
+            </span>
+            <span class="weekerror"></span>
+          </span><br>
+          <label for="wed">
+            <input type="checkbox" checked="true" name="weekdays" id="wed" onclick="dayVisibility(this.id)">Wednesday:</label>
+          <span id="wedt" class="weekDays" style="display: none;">
+            <span class="input-control-day">
+              <input id="wedStTime" name="wedStTime" type="time" value="09:00" onfocus="this.showPicker()">
+              <span class="error"></span>-
+              <input id="wedEnTime" name="wedEnTime" type="time" value="18:00" onfocus="this.showPicker()">
+            </span>
+            <span class="weekerror"></span>
+          </span><br>
+          <label for="thu">
+            <input type="checkbox" checked="true" name="weekdays" id="thu" onclick="dayVisibility(this.id)">Thursday:</label>
+          <span id="thut" class="weekDays" style="display: none;">
+            <span class="input-control-day">
+              <input id="thuStTime" name="thuStTime" type="time" value="09:00" onfocus="this.showPicker()">
+              <span class="error"></span>-
+              <input id="thuEnTime" name="thuEnTime" type="time" value="18:00" onfocus="this.showPicker()">
+            </span>
+            <span class="weekerror"></span>
+          </span><br>
+          <label for="fri">
+            <input type="checkbox" checked="true" name="weekdays" id="fri" onclick="dayVisibility(this.id)">Friday:</label>
+          <span id="frit" class="weekDays" style="display: none;">
+            <span class="input-control-day">
+              <input id="friStTime" name="friStTime" type="time" value="09:00" onfocus="this.showPicker()">
+              <span class="error"></span>-
+              <input id="friEnTime" name="friEnTime" type="time" value="18:00" onfocus="this.showPicker()">
+            </span>
+            <span class="weekerror"></span>
+          </span><br>
+          <label for="sat">
+            <input type="checkbox" name="weekdays" id="sat" onclick="dayVisibility(this.id)">Saturday:</label>
+          <span id="satt" class="weekDays" style="display: none;">
+            <span class="input-control-day">
+              <input id="satStTime" name="satStTime" type="time" value="09:00" onfocus="this.showPicker()">
+              <span class="error"></span>-
+              <input id="satEnTime" name="satEnTime" type="time" value="18:00" onfocus="this.showPicker()">
+            </span>
+            <span class="weekerror"></span>
+          </span><br>
+          <label for="sun">
+            <input type="checkbox" name="weekdays" id="sun" onclick="dayVisibility(this.id)">Sunday:</label>
+          <span id="sunt" class="weekDays" style="display: none;">
+            <span class="input-control-day">
+              <input id="sunStTime" name="sunStTime" type="time" value="09:00" onfocus="this.showPicker()">
+              <span class="error"></span>-
+              <input id="sunEnTime" name="sunEnTime" type="time" value="18:00" onfocus="this.showPicker()">
+            </span>
+            <span class="weekerror"></span>
+          </span><br>
+          <div class="dayerror"></div>
+        </div>
+      </div>
+
+      <div class="tab">
+        <div class="input-control">
+          <label for="description">Short description about the event:</label>
+          <textarea id="description" name="description" rows="5"></textarea>
+          <div class="error"></div>
+        </div>
+      </div>
+      <div class="tab">
+        <center>
+          <h3 id="success-msg"></h3>
+        </center>
+      </div>
+      <div style="overflow:auto; margin-bottom: -30px;">
+        <div style="width: 90%;margin-left: 5%;">
+          <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+          <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+        </div>
+      </div>
+      <!-- Circles which indicates the steps of the form: -->
+      <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+      </div>
+    </form>
+  </div>
+  <footer>
+    <p>All rights reserved &copy; </p>
+  </footer>
+</body>
+
+</html>

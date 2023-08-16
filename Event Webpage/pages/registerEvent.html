@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuikBook|Register Events</title>
+  <link rel="stylesheet" href="../styles/registerEventstyle.css" />
+  <script defer src="../scripts/registerEventscript.js"></script>
+  <script derer src="../scripts/validationScript.js"></script>
+</head>
+
+<body>
+  <header>
+    <div id="navbar">
+      <span id="logo"><img src="../assets/logo3.png" alt=""></span>
+      <div id="navbar-right">
+        <span>
+          <a href="../index.html">Home</a>
+          <a href="../pages/eventsDisplay.html">Events</a>
+      </div>
+    </div>
+  </header>
+  <div id="empty">.</div>
+  <div id="success-msg"><center><br><br>
+    <img src="../assets/registerSuccess.png" alt="">
+  <h1 >You've successfully Registered</h1></center>
+</div>
+  <form action="#" class="form" id="form">
+    <h2 class="text-center">Book Your Slot</h2>
+    <!-- progress bar -->
+    <div class="progressbar">
+      <div class="progress" id="progress"></div>
+      <div class="progress-step progress-step-active" data-title="Event_Info"></div>
+      <div class="progress-step" data-title="Contact_Details"></div>
+      <div class="progress-step" data-title="Verify"></div>
+    </div>
+    <br><br>
+    <!-- main phase -->
+    <div class="mainphase">
+      <div class="form-step form-step-active">
+
+        <div class="calendar">
+          <div class="calendar-header">
+            <span class="month-change" id="prev-month">
+              <pre><</pre>
+            </span>
+            <span class="month-picker" id="month-picker">April</span>
+            <span class="month-change" id="next-month">
+              <pre>></pre>
+            </span>
+            <div class="year-picker">
+              <span id="year">2022</span>
+            </div>
+          </div>
+          <div class="calendar-body">
+            <div class="calendar-week-day">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="calendar-days"></div>
+          </div>
+
+          <div class="month-list"></div>
+        </div>
+        <div id="slotSection">
+          <!-- event details part -->
+          <div>
+            <h2 style="font-size: 25px;">Available Slots:<a style="color: red;">*</a></h2><br>
+            <div id="availableSlots">
+            </div>
+            <div id="errormsg"></div>
+          </div>
+          <div class="btn-group">
+            <a href="#" class="btn btn-next" >Next</a>
+          </div>
+        </div>
+      </div>
+      <div class="form-step" id="formSteps">
+        <!-- user details part -->
+        <div class="input-control">
+          <label for="username">Name:<a style="color: red;">*</a></label>
+          <input id="username" name="username" type="text">
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="email">Email:<a style="color: red;">*</a></label>
+          <input id="email" name="email" type="email">
+          <div class="error"></div>
+        </div>
+        <div class="input-control">
+          <label for="phone">Phone No:<a style="color: red;">*</a></label>
+          <input id="phone" name="phone" type="number">
+          <div class="error"></div>
+        </div>
+        <div class="btn-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <a href="#" class="btn btn-next">Next</a>
+        </div>
+      </div>
+      <div class="form-step" id="formSteps">
+        <div id="eventDetails">
+        </div>
+        <div class="btn-group">
+          <a href="#" class="btn btn-prev">Previous</a>
+          <button class="btn btn-sub" type="submit">Submit</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  <footer>
+    <p>All rights reserved &copy; </p>
+  </footer>
+</body>
+
+</html>

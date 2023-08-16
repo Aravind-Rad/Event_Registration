@@ -1,0 +1,203 @@
+body {
+  background-color: #d0e6f4;
+  background-size:cover;
+  display:flex;
+  height:100vh;
+  flex-direction: column;
+}
+header {
+  background-color: #04aa6d;
+}
+
+#createEvent{
+  background-color: #009900;
+  font-size: 30px;
+  color: #d0e6f4;
+  font-style: normal;
+  text-decoration: none;
+  cursor: pointer;
+  border-radius: 5px;
+
+}
+
+
+/* side nav bar for user preferance */
+.sidenav{
+  position:fixed;
+  margin-top: 250px;
+  z-index: 99;
+}
+#mySidenav a {
+  position: absolute; /* Position them relative to the browser window */
+  left: -120px; /* Position them outside of the screen */
+  transition: 0.3s; /* Add transition on hover */
+  padding: 15px; /* 15px padding */
+  width: 170px; /* Set a specific width */
+  text-decoration:none; /* Remove underline */
+  text-align: left;
+  font-size: 20px; /* Increase font size */
+  color: white; /* White text color */
+  border-radius: 0 25px 25px 0; /* Rounded corners on the top right and bottom right side */
+  cursor: pointer;
+}
+
+#mySidenav :hover {
+  left: 0; /* On mouse-over, make the elements appear as they should */
+  cursor: pointer;
+}
+
+/* The Profile link: 20px from the top with a green background */
+#Profile {
+  top: 20px;
+  background-color: #04AA6D;
+}
+#navimg{
+  position: absolute;
+  left:130px;
+  width:20px;
+}
+
+#Create {
+  top: 80px;
+  background-color: #2196F3; /* Blue */
+}
+
+#MyEvents {
+  top: 140px;
+  background-color: #f44336; /* Red */
+}
+
+#Logout {
+  top: 200px;
+  background-color: #555 /* Light Black */
+}
+/* rendering the hover over images */
+
+#navimg:hover{
+  left:160px;
+}
+
+
+.container{
+overflow: hidden;
+margin-top: 25px;
+padding: 20px;
+max-width: 80%;
+min-height: 150px;
+border-radius: 10px;
+color: black;
+background-color:transparent;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
+}
+
+#events{
+width: 90%;
+}
+
+
+/* event details */
+
+.eventLists{
+margin-top: 150px;
+}
+.container .card{
+position: relative;
+width: 250px;
+height: 250px;
+border-radius: 10px;
+box-shadow: 0px 15px 25px rgba(0,0,0,.2);
+background-color: #fff;
+margin: 20px;
+overflow: hidden;
+transition: .5s;
+}
+
+.container:hover .card{
+transform: scale(1.0);
+} 
+
+.container .card:hover{
+filter: blur(0);
+transform: scale(1.2);
+opacity: 1;
+} 
+
+.container .card .circle{
+position: relative;
+width: 100%;
+height: 100%;
+top: -90px;
+background-color: rgb(25, 99, 173);
+clip-path: circle(180px at center 0);
+text-align: center;
+} 
+.container .card .circle h1{
+  margin-top: 55px;
+  color:#fff;
+}
+.container .card .content{
+position: absolute;
+bottom: 10px;
+line-height: 1.5;
+text-align: center;
+padding: 15px;
+color: black;
+width: 90%;
+}
+
+.container .card .content p{
+text-align: justify;
+font-size: 15px;
+}
+
+.container .card .content img{
+height:20px;
+width: 20px;
+}
+table{
+border:1.5px solid;
+width: 100%;
+border-collapse: collapse;
+text-align: center;
+color:black;
+}
+
+table th,td{
+border: 1px solid;
+border-bottom: 1px solid #080101;
+}
+
+table tr:hover{
+background-color: beige;
+}
+
+.editbtn:hover{
+background-color:#2196F3;
+cursor: pointer;
+}
+.deletebtn:hover{
+background-color:#f44336;
+cursor: pointer;
+}
+.editbtn{
+background-color: rgba(25, 99, 173, 0.1);
+color:black;
+padding: 5px;
+border-radius: 5px;
+font-size: 13px;
+float: left;
+}
+.infobtn, .deletebtn{
+background-color: rgb(25, 99, 173,0.1);
+color: black;
+padding: 5px;
+border-radius: 5px;
+font-size: 13px;
+float: right;
+}
+.infobtn:hover{
+background-color:#009900;
+cursor: pointer;
+}

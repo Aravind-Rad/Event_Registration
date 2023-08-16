@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuikBook|Login</title>
+    <link rel="stylesheet" href="../styles/loginStyle.css" />
+    <script defer src="../scripts/loginScript.js"></script>
+    <script defer src="../scripts/validationScript.js"></script>
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <span id="logo"><img src="../assets/logo3.png" alt=""></span>
+        <div id="navbar-right">
+          <span>
+            <a href="../index.html">Home</a>
+            <a href="../pages/eventsDisplay.html">Events</a>
+        </div>
+      </div>
+    </header>
+    <div id="success-msg"><center><br><br>
+      <img src="../assets/loginSuccess.png" alt="">
+    <h1 >You've successfully Logged In</h1></center>
+  </div>
+    <section>
+      <div class="container" >
+        <form id="form" class="modal-content animate" method="post" onclick="userManipulation()">
+          <img src="../assets/user.png" alt="Avatar" class="avatar" />
+          <div class="container">
+          <div class="input-control">
+            <label>User Email<a style="color: red;">*</a></label>
+            <input id="usemail" name="user" type="text">
+            <div class="error"></div>
+        </div>
+        <div class="input-control">
+            <label>Password<a style="color: red;">*</a></label>
+            <input id="uspass"name="uspass" type="password">
+            <div class="error"></div>
+        </div>
+            <button type="submit">Login</button>
+          </div>
+          <span id="loginlinky">New here!! <a href="../pages/register.html">let's Register</a></span>
+          <br>
+          
+        </form>
+          </div>
+          <br>
+  </section>
+  <footer>
+    <p>All rights reserved &copy; </p>
+  </footer>
+</body>
+</html>

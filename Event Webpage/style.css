@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #d0e6f4;
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  color: black;
+}
+header {
+  background-color: #04aa6d;
+}
+
+/* Create a sticky/fixed navbar */
+#navbar {
+  background-color: #d0e6f4;
+  padding: 30px 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+}
+
+/* Style the navbar links */
+#navbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* Style the logo */
+#navbar #logo {
+  margin-left: 5%;
+}
+
+#navbar #logo img {
+  width: 300px;
+  height: 50px;
+}
+
+/* Links on mouse-over */
+#navbar a:hover {
+  background-color: royalblue;
+  border-radius: 10px;
+  color: white;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+  border-radius: 10px;
+  background-color: dodgerblue;
+  color: white;
+}
+
+#navbar a.active:hover {
+  background-color: royalblue;
+}
+
+/* Display some links to the right */
+#navbar-right {
+  float: right;
+  margin-right: 5%;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  border-radius: 10px;
+  color: white;
+  padding: 1px;
+  font-size: 16px;
+  border: none;
+}
+
+/* form manipulation */
+
+.input-control {
+  display: flex;
+  color: #d0e6f4;
+  flex-direction: column;
+}
+
+.input-control input {
+  border: 2px solid #f0f0f0;
+  border-radius: 5px;
+  display: inline;
+  font-size: 12px;
+  padding: 10px;
+  width: 100%;
+}
+
+form #admin,
+form #user,
+form #adpass,
+form #uspass {
+  float: left;
+  width: 100%;
+  font-size: auto;
+  display: inline;
+}
+
+.input-control input:focus {
+  outline: 0;
+}
+
+.input-control.success input {
+  border-color: #09c372;
+}
+
+.input-control.error input {
+  border-color: #ff3860;
+}
+
+.input-control .error {
+  color: #ff3860;
+  font-size: 9px;
+  height: 13px;
+}
+
+form button {
+  padding: 10px;
+  margin-top: 10px;
+  width: 100%;
+  color: white;
+  background-color: royalblue;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+#showcase {
+  margin-top: 200px;
+  min-height: 400px;
+  background-color: aliceblue;
+  text-align: center;
+  color: black;
+}
+
+#showcase h1 {
+  margin-top: 100px;
+  font-size: 55px;
+  margin-bottom: 10px;
+}
+
+#showcase p {
+  font-size: 20px;
+}
+
+#showcase .button {
+  border-radius: 10px;
+  background-color: #e8491d;
+  transition: all .3s ease-out;
+  height: 30px;
+  margin: auto;
+  padding: 0 5px;
+  padding-top: 5px;
+
+  max-width: max-content;
+}
+
+#showcase .button:hover {
+  background-color: rgb(67, 204, 85);
+}
+
+#showcase .button a {
+  text-decoration: none;
+  text-align: center;
+  color: aliceblue;
+}
+
+#showcase h1 {
+  margin-top: 100px;
+  font-size: 50px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  background-color: aliceblue;
+}
+
+
+#empty {
+  margin-top: 100px;
+}
+
+/* page1 styles */
+#leftcont {
+  margin-left: 5%;
+  margin-top: 20%;
+  width: 55%;
+  float: left;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#leftcont h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 35px;
+}
+
+#rightimg {
+  width: 35%;
+  height: auto;
+  float: right;
+}
+
+#rightimg img {
+  max-width: 100%;
+  height: 80vh;
+}
+
+#leftimg {
+  margin-left: 5%;
+  width: 35%;
+  height: auto;
+  float: left;
+}
+
+#leftimg img {
+  margin-top: 40%;
+  max-width: 100%;
+  height: 90vh;
+}
+
+#rightcont {
+  margin-top: 20%;
+  width: 55%;
+  float: left;
+  color: #000000;
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#rightcont h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 35px;
+}
+
+#page3 {
+  margin-top: 20%;
+  height: 100vh;
+}
+
+#stepsimg {
+  display: flex;
+  width: 18%;
+  margin-left: 5%;
+  margin-bottom: 10%;
+}
+
+#steps {
+  margin-bottom: 15%;
+}
+
+#steps a {
+  background-color: #09c372;
+  border: 10px;
+  padding: 20px;
+  color: #000000;
+  text-decoration: none;
+  border-color: #09c372;
+  max-width: fit-content;
+  border-radius: 10px;
+  margin-left: 30%;
+}
+
+/* Add responsiveness - on screens less than 580px wide, display the navbar vertically instead of horizontally */
+@-webkit-keyframes animatezoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes animatezoom {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 100px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+
+  .cancelbtn {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 100px) {
+  #navbar {
+    padding: 20px 10px !important;
+    /* Use !important to make sure that JavaScript doesn't override the padding on small screens */
+  }
+
+  #navbar a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  #navbar-right {
+    float: none;
+  }
+}

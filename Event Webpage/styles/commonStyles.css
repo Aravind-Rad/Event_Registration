@@ -1,0 +1,98 @@
+/* common styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-body: #4d4c5a;
+    --dark-main: #141529;
+    --dark-second: #79788c;
+    --dark-hover: #323048;
+    --dark-text: #f8fbff;
+    --light-body: #f3f8fe;
+    --light-main: #fdfdfd;
+    --light-second: #c3c2c8;
+    --light-hover: #edf0f5;
+    --light-text: #151426;
+    --blue: #007497;
+    --white: #fff;
+    --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --font-family: cursive;
+}
+
+/* Create a sticky/fixed navbar */
+#navbar {
+    background-color: #d0e6f4;
+    padding: 30px 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+  }
+  
+  /* Style the navbar links */
+  #navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 10px;
+  }
+  
+  /* Style the logo */
+  #navbar #logo {
+    margin-left: 5%;
+  }
+  
+  #navbar #logo img {
+    width: 300px;
+    height: 50px;
+  }
+  
+
+/* Links on mouse-over */
+#navbar a:hover {
+    background-color: royalblue;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Style the active/current link */
+#navbar a.active {
+    border-radius: 10px;
+    background-color: dodgerblue;
+    color: white;
+    cursor: pointer;
+}
+
+#navbar a.active:hover {
+    background-color: royalblue;
+}
+
+/* Display some links to the right */
+#navbar-right {
+    padding: 10px;
+    float: right;
+    margin-right: 5%;
+}
+#empty{
+    margin-top: 100px;
+}  
+
+footer{
+    position: fixed;
+    bottom: 0;
+    font-size: 18px;
+    width: 100%;
+    padding: 5px;
+    text-align: center;
+    background-color: aliceblue;
+  }
+  
